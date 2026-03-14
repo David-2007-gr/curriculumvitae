@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David O. G. | Portfólio & Currículo</title>
+    <meta name="description" content="Currículo e portfólio de David O. G., estudante de Análise e Desenvolvimento de Sistemas na FATEC Guarulhos.">
+    <meta property="og:title" content="David O. G. | Currículo">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://david-2007-gr.github.io/webcurriculumvitae/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #e5e7eb;
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #94a3b8;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            animation: containerSlide 0.6s ease-out;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 35%;
+            background: linear-gradient(to bottom, rgba(224, 242, 254, 0.5) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        @keyframes containerSlide {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .container, section {
+                animation: none;
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #0078d4;
+            letter-spacing: -1px;
+            text-shadow: 1px 1px 0px #fff;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            background: linear-gradient(to bottom, #ffffff 0%, #f1f5f9 100%);
+            border: 1px solid #cbd5e1;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: #0369a1;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            border-color: #0078d4;
+            box-shadow: 0 5px 15px rgba(0, 120, 212, 0.2);
+        }
+
+        section { margin-bottom: 35px; opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #0891b2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 1.6;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            background: #ffffff;
+            border-color: #0078d4;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .card h3 { font-size: 1.1rem; color: #0078d4; margin-bottom: 5px; }
+        .sub { color: #64748b; font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; }
+
+        ul { list-style: none; }
+        ul li { margin-bottom: 8px; position: relative; padding-left: 20px; }
+        ul li::before { content: "•"; color: #0078d4; font-weight: bold; position: absolute; left: 0; }
+
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tag {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #334155;
+        }
+        .tag-blue { background: #0078d4; color: #fff; border: none; }
+
+        footer { text-align: center; color: #94a3b8; font-size: 0.8rem; margin-top: 20px; }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px 15px; border-radius: 0; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>David O. G.</h1>
+            <p class="tagline">Análise e Desenvolvimento de Sistemas | FATEC Guarulhos</p>
+            <div class="contact-links">
+                <a href="mailto:contact.davidgru@gmail.com" class="btn"><i class="fas fa-envelope"></i> E-mail</a>
+                <a href="https://github.com/David-2007-gr" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </header>
+
+        <section>
+            <h2><i class="fas fa-bullseye"></i> Objetivo</h2>
+            <div class="card">
+                <p>Estudante de Análise e Desenvolvimento de Sistemas em busca de uma primeira oportunidade na área de tecnologia. Tenho sólido interesse em desenvolvimento de software e administração de sistemas, buscando evoluir tecnicamente em um ambiente profissional colaborativo.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-university"></i> Formação Acadêmica</h2>
+            <div class="card">
+                <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                <p class="sub">FATEC Guarulhos | 02/2026 – Atual (1º semestre)</p>
+                <p>Horário: 13h às 16:20h</p>
+            </div>
+            <div class="card" style="margin-top: 10px;">
+                <h3>Ensino Médio Completo</h3>
+                <p class="sub">E.E. Prof. João Álvares de Siqueira Bueno | Concluído em 2025</p>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-tools"></i> Habilidades Técnicas</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Desenvolvimento Web:</strong> HTML5, CSS3, JavaScript e TypeScript (Nível Sólido).</li>
+                    <li><strong>Programação e Lógica:</strong> C e C++ (Orientação a Objetos), Python (Básico).</li>
+                    <li><strong>Sistemas Operacionais:</strong> Administração de ambientes Windows e Linux (Debian e gerenciamento Flatpak).</li>
+                    <li><strong>Ferramentas:</strong> Git/GitHub, Microsoft Office (Excel/PowerPoint) e LibreOffice.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-certificate"></i> Cursos e Desenvolvimento</h2>
+            <div class="card">
+                <ul>
+                    <li>Formação FullStack JavaScript e TypeScript (146 horas).</li>
+                    <li>Linguagem C e C++: Do básico à Programação Orientada a Objetos (27,5 horas).</li>
+                    <li>Idiomas: Inglês e Espanhol (CEL E.E. Prof. Alice Chuery).</li>
+                    <li><strong>Medalha de Prata na Competição USP de Conhecimentos (CUCO 2025).</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+            <div class="card">
+                <h3>Rz Cred Promotora – Consultor de Vendas</h3>
+                <p class="sub">02/2025 a 10/2025</p>
+                <p>Atuação focada no atendimento ao cliente, negociação e alcance de resultados. Esta experiência desenvolveu minha comunicação assertiva, resiliência e a capacidade de resolver problemas de forma ágil sob pressão.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-user-check"></i> Competências Pessoais</h2>
+            <div class="card">
+                <div class="skills-grid">
+                    <span class="tag">Disciplina e Assiduidade</span>
+                    <span class="tag">Raciocínio Lógico Estruturado</span>
+                    <span class="tag">Escrita Técnica</span>
+                    <span class="tag">Capacidade de Concentração</span>
+                    <span class="tag">Trabalho Colaborativo</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-info-circle"></i> Informações Adicionais</h2>
+            <div class="card">
+                <p><strong>Disponibilidade de horário:</strong> Período da manhã (até as 12h) ou noite (após as 17h).</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 • David O. G.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} • David O. G.`;
+    </script>
+</body>
+</html>
